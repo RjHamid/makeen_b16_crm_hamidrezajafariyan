@@ -20,6 +20,9 @@
           <a class="nav-link" href="product.html">محصولات</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="list.html">لیست محصولات</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="creat.html">سفارشات</a>
         </li>
         <li class="nav-item">
@@ -31,47 +34,16 @@
       </ul>
     </div>
   </nav>
-      <div class="container mt-3">
-        <h2>محصولات </h2>         
-        <table class="table table-hover">
-          <thead>
-            <tr>
-              <th>نام محصول</th>
-              <th>قیمت</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>طراحی سایت</td>
-              <td> 70/000/000ریال</td>
-            </tr>
-            <tr>
-              <td>طراحی عکس</td>
-              <td>5/000/000ریال </td>
-            </tr>
-            <tr>
-              <td>فروش دیتا بیس</td>
-              <td>100/000/000ریال</td>
-            </tr>
-            <tr>
-              <td><button type="submit">ویرایش</button></td>
-              <td><button type="submit">حذف</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <form action="http//localhost/php1.2/poroduct.php" method="get">
       <div class="mb-3 mt-3">
         <label for="name" class="form-label">اسم محصول :</label>
-        <input type="text" class="form-control" id="name" placeholder="اسم محصول "name="محصول ">
+        <input type="text" class="form-control" id="name" name="name" placeholder="اسم محصول ">
       </div>
       <div class="mb-3 mt-3">
         <label for="name" class="form-label">قیمت :</label>
-        <input type="text" class="form-control" id="name" placeholder="قیمت  را وارد کنید" name="قیمت ">
+        <input type="text" class="form-control" id="name" name="price" placeholder="قیمت  را وارد کنید">
       </div>
-      <div class="mb-3 mt-3">
-        <label for="name" class="form-label">نوع محصول :</label>
-        <input type="text" class="form-control" id="name" placeholder="نوع محصول را وارد کنید" name="نوع ">
-      </div>
-      <button type="submit">ارسال</button>
+      <button type="submit" class="btn btn-primary">ارسال</button>
+    </form>
 </body>
 </html>
