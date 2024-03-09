@@ -2,7 +2,7 @@
 <html lang="en" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewports" content="width=device-width, initial-scale=1.0">
     <title>jafariyan</title>
 </head>
 <link rel="stylesheet" href="style.css">
@@ -34,16 +34,18 @@
       </ul>
     </div>
   </nav>
-      <form action="http://localhost/proje1/product.php?type=creatProduct" method="post">
+  <form action="http://localhost/proje1/order.php?type=editcatguries&id=<?php echo $_GET['id']; ?>" method="post">
+    <?php $con = mysqli_connect("localhost" ,"root" , "" , "shop" );
+         $sql = "SELECT * from orders where id=" . $_GET['id'];
+       $result = mysqli_query($con , $sql);
+       $row = mysqli_fetch_assoc($result)
+       ?>    
+    <div class="mb-3 mt-3">
+          <label for="name" class="form-label"> ویرایش سفارشات:</label>
+          <input type="text" class="form-control" id="name" name="orders_table" placeholder="نام  را وارد کنید" value="<?php echo $row['orders_table'] ?>" >
+        </div>
       <div class="mb-3 mt-3">
-        <label for="name" class="form-label">اسم محصول :</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="اسم محصول ">
-      </div>
-      <div class="mb-3 mt-3">
-        <label for="name" class="form-label">قیمت :</label>
-        <input type="text" class="form-control" id="name" name="price" placeholder="قیمت  را وارد کنید">
-      </div>
-      <button type="submit" class="btn btn-primary">ارسال</button>
-    </form>
+        <button type="submit" class="btn btn-primary">ثبت نام</button>
+      </form>
 </body>
 </html>

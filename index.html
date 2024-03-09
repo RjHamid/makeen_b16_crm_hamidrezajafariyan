@@ -26,7 +26,7 @@
           <a class="nav-link" href="creat.html">سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="catguries.html">دسته بندی</a>
+          <a class="nav-link" href="catguries.php">دسته بندی</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="post.html">مقالات</a>

@@ -1,0 +1,16 @@
+{
+   "user" : {
+    "FirstName" : "hamid",
+    "LastName" : "jafariyan",
+    "email" : "jafariyan@gmail.com",
+    "password" : 120
+   },
+   "product" :{
+      "name" : "katoni",
+      "price" : 4000
+   },
+   "orders" : {
+    "orders_table" : "tarahisyte"
+   }
+
+  }

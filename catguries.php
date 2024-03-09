@@ -26,7 +26,7 @@
           <a class="nav-link" href="creat.html">سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="catguries.html">دسته بندی</a>
+          <a class="nav-link" href="catguries.php">دسته بندی</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="post.html">مقالات</a>
@@ -43,18 +43,24 @@
              
             </tr>
           </thead>
+          <?php
+  $con = mysqli_connect("localhost" ,"root" , "" , "shop" );
+  $sql = "SELECT * FROM `orders` ";
+$result = mysqli_query($con , $sql);
+
+if (mysqli_num_rows($result) > 0){
+  while($row = mysqli_fetch_assoc($result)){
+ ?>
           <tbody>
-            <tr>
-              <td>طراحی سایت</td>
+            
+              <td><?php echo $row['orders_table']; ?></td>
            
-            </tr>
-            <tr>
-              <td>طراحی عکس</td>
            
-            </tr>
-            <tr>
-              <td>فروش دیتا بیس</td>
        
-            </tr>
+           
+              <td> <a href="editcatguries.php?id=<?php echo $row['id']; ?>"><button type="submit">ویرایش</button></a></td>
+              <td><a href="order.php?type=deletecatguries&id=<?php echo $row['id']; ?>" onclick=" return confirm('اطمینان دارید؟')"><button type="submit">حذف</button></a></td>
+          </tbody>
+          <?php } } ?>
 </body>
 </html>

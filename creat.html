@@ -26,7 +26,7 @@
           <a class="nav-link" href="creat.html">سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="catguries.html">دسته بندی</a>
+          <a class="nav-link" href="catguries.php">دسته بندی</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="post.html">مقالات</a>
@@ -34,13 +34,13 @@
       </ul>
     </div>
   </nav>
-      <form>
-        <div class="row">
-          <div class="col">
-            <input type="text" class="form-control" placeholder="نام محصول را وارد کنید" name="نام محصول">
-            <button type="submit">ثبت محصول</button>
-          </div>
+      <form action="http://localhost/proje1/order.php?type=creatorder" method="post">
+        <div class="mb-3 mt-3">
+          <label for="name" class="form-label">سفارشات :</label>
+          <input type="text" class="form-control" id="name" name="orders_table" placeholder="نام  را وارد کنید" >
         </div>
+      <div class="mb-3 mt-3">
+        <button type="submit" class="btn btn-primary">ثبت نام</button>
       </form>
 </body>
 </html>

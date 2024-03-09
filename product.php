@@ -13,7 +13,7 @@ header('location:http://localhost/proje1/product.html');
 
     $end = end($_POST);
 
-    $query = "update users set ";
+    $query = "update product set ";
 
     foreach ($_POST as $key => $value) {
         $query .= "$key='$value'";
