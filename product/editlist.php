@@ -11,30 +11,30 @@
     <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="index.html">صفحه اصلی</a>
+          <a class="nav-link" href="/proje1/user/index.html">صفحه اصلی</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="user.php">کاربران</a>
+          <a class="nav-link " href="/proje1/user/user.php">کاربران</a>
         </li>
        <li class="nav-item">
-          <a class="nav-link" href="product.html">محصولات</a>
+          <a class="nav-link" href="/proje1/product/product.html">محصولات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="list.php">لیست محصولات</a>
+          <a class="nav-link" href="/proje1/product/list.php">لیست محصولات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="creat.html">سفارشات</a>
+          <a class="nav-link" href="/proje1/ordres/creat.html">سفارشات</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="catguries.html">دسته بندی</a>
+          <a class="nav-link" href="/proje1/ordres/catguries.php">دسته بندی</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="post.html">مقالات</a>
+          <a class="nav-link" href="/proje1/post.html">مقالات</a>
         </li>
       </ul>
     </div>
   </nav>
-      <form action="http://localhost/proje1/product.php?type=editlist&id=<?php echo $_GET['id']; ?>" method="post">
+      <form action="http://localhost/proje1/product/product.php?type=editlist&id=<?php echo $_GET['id']; ?>" method="post">
        <?php $con = mysqli_connect("localhost" ,"root" , "" , "shop" );
          $sql = "SELECT * from product where id=" . $_GET['id'];
        $result = mysqli_query($con , $sql);
